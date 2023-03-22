@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+\
+  <h1>Estudo em <i>Eventos</i> DOM </h1>
+  <h2>CALCULADORA</h2>
+
+  <input type="number" name="n1" id="n1">+
+  <input type="number" name="n2" id="n2">
+  <input type="button" value="somar"  id="btn">
+  <div id="r">...</div>
+
+  <script>
+    
+    var b = window.document.querySelector("#btn")
+    var n1 = window.document.querySelector("#n1")
+    var n2 = window.document.querySelector("#n2")
+    var r = window.document.querySelector("#r")
+
+    // Evento No JS  VOU PARA O MODULO D
+    b.addEventListener(`click`, clique)
+    
+
+    function clique(){
+      var resultado = Number(n1.value) + Number(n2.value)
+  
+      r.innerHTML=`<h1> A soma de ${n1.value} com ${n2.value} é ${resultado} </h1>`
+    }
+
+
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      div#area{
+        font: normal 20pt Arial;
+        background-color: rgb(84, 84, 209);
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+      }   
+    </style>
+
+</head>
+<body>
+\
+  <h1>Estudo em <i>Eventos</i> DOM</h1>
+
+  <!-- Evento No HTML 
+
+  <div id="area" onclick="clique()"> Clique em min </div>
+  -->
+
+  <!-- Evento No JS -->
+
+  <div id="area"> Clique em min </div>
+  
+  <script>
+    
+    var d = window.document.querySelector("div#area")
+
+    // Evento No JS 
+    d.addEventListener(`click`, clique)
+    d.addEventListener(`mouseenter`, entrar)
+    d.addEventListener(`mouseout`, sair)
+
+    function clique(){
+      d.style.background = "green"
+      d.innerText = "Clicou!!"
+    }
+    function entrar(){
+      d.style.background = "blue"
+      d.innerText = "Entrou!!"
+    }
+    function sair(){
+      d.style.background = "red"
+      d.innerText = "Saiu!!"
+    }
+
+  </script>
+    
+</body>
+</html>
